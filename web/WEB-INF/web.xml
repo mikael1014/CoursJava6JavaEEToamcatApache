@@ -12,6 +12,10 @@
         <servlet-name>MonnomServlet</servlet-name>
         <servlet-class>fr.appli.servlets.About</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Connexion</servlet-name>
+        <servlet-class>fr.appli.servlets.Connexion</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>BonjourServlet</servlet-name>
         <url-pattern>/bonjour</url-pattern>
@@ -23,6 +27,10 @@
     <servlet-mapping>
         <servlet-name>MonnomServlet</servlet-name>
         <url-pattern>/About</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Connexion</servlet-name>
+        <url-pattern>/Connexion</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
