@@ -9,22 +9,29 @@
 /* GLOBAL */
 /*---------------------------------------------------------------------*/
 body {
-	background-color: grey;
+	font-family: 'Roboto', sans-serif;
+	/*font-family: Arial, Helvetica, sans-serif;*/
+	font-size: 16px;
+	color: #666;
+	line-height: 1.5;
+	background-color: #fff;
 }
 /* typo */
 /*--------------------*/
 h1, h2, h3, h4, h5, h6 {
 	font-family: 'Raleway', sans-serif;
-	color: #da5488;
+	color: #b454da;
 	line-height: 1.2;
+	margin: 20px 0 0 0;
+       
 }
 h1 {
 	font-size: 45px;
-        color: blue;
+        text-align: center;
 }
 h2 {
 	font-size: 30px;
-	color: yellow;
+	color: #54b4da;
 }
 h3 {
 	font-size: 25px;
@@ -38,11 +45,24 @@ h5 {
 h6 {
 	font-size: 16px;
 }
+
 /* others */
 /*--------------------*/
-
+p {
+	margin: 0 0 20px 0;
+}
+figure {
+	margin: 0;
+}
 /* links */
 /*--------------------*/
+a {
+	color: #039be5;
+}
+
+a:hover {
+	text-decoration: none;
+}
 
 /* forms */
 /*--------------------*/
@@ -53,22 +73,195 @@ h6 {
 /* buttons */
 /*--------------------*/
 
+/* helpers */
+/*--------------------*/
+.img-left {
+	float: left;
+	margin-right: 10px;
+}
+.img-right {
+	float: right;
+	margin-left: 10px;
+}
+.clear {
+	clear: both;
+}
+.overflow {
+	overflow: hidden;
+}
+
+.bg-light {
+	background-color: #ddd;
+	padding: 20px;
+}
+
 /*---------------------------------------------------------------------*/
 /* LAYOUT */
 /*---------------------------------------------------------------------*/
-
+.wrap {
+	width: 940px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin: 0 auto;
+}
 /* header */
 /*--------------------*/
-
+header {
+	background-color: #da5488;
+	text-align: center;
+	padding: 20px;
+}
+header h1 {
+    color: #fff;
+    margin-top: 0;
+}
 /* nav */
 /*--------------------*/
+nav ul {
+	margin: 0;
+	padding-left: 0;
+	list-style-type: none;
+	text-align: center;
+	background-color: #333;
+	font-size: 0;
+}
+nav li {
+	display: inline-block;
+}
+nav a {
+	display: block;
+	color: #fff;
+	text-decoration: none;
+	font-size: 16px;
+	padding: 10px 20px;
+}
 
+nav a:hover {
+	background-color: #fff;
+	color: #333;
+}
+/*.current {
+	background-color: #da5488;
+}*/
+/*nav ul li .current {
+	background-color: #da5488;
+	color: #fff;
+}*/
+nav a.current {
+	background-color: #da5488;
+	color: #fff;
+}
 /* main */
 /*--------------------*/
+.banner {
+	background-image: url(../images/laptop.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: 50% 10%;
+	padding: 200px 0;
+} 
+.banner h2 {
+	text-align: center;
+	color: #fff;
+	font-weight: 700;
+	text-transform: uppercase;
+	font-size: 45px;
+}
+.item {
+	/*width: 10%;*/
+	padding: 40px 0;
+	background-color: #ddd;
+}
+.item:nth-child(odd) {
+	background-color: #eee;
+}
+.item h1 {
+	margin-top: 0;
+	text-align: center;
+}
+.flex {
+	display: flex;
+	flex-direction: row;
+/*	flex-direction: row-reverse;
+	flex-direction: column;
+	flex-direction: column-reverse;*/
 
+/*	flex-wrap: nowrap;*/
+	flex-wrap: wrap;
+/*	flex-wrap: wrap-reverse;*/
+
+	justify-content:flex-start; 
+/*	justify-content: flex-end;
+	justify-content: center;
+	justify-content: space-between;
+	justify-content: space-around;*/
+	background-color: #333;
+	/*height: 500px;*/
+	align-items: stretch;
+/*	align-items: flex-start;
+	align-items: flex-end;
+	align-items: center;*/
+	
+
+	/*align-content: flex-start;
+	align-content: flex-end;
+	align-content: center;
+	align-content: space-around;
+	align-content: space-between;*/
+}
+.item-1 {
+	flex-grow: 1;
+	order: 1;
+}
+.item-2 {
+	flex-grow: 2;	
+	order: 2;
+}
+.item-3 {
+	flex-grow: 1;
+	order: 3;
+}
+.item-4 {
+	flex-grow: 1;	
+	order:4;
+}
+.flex-2, .flex-3 {
+	display: flex;
+}
+.flex-2 article, .flex-3 article {
+	margin-right: 20px;
+}
+.flex-2 article:last-child,
+.flex-3 article:last-child {
+	margin-right: 0px;
+}
+.flex-3 article:first-child {
+	width: 620px;
+}
+.flex-3 article:last-child {
+	width: 300px;
+}
 /* aside */
 /*--------------------*/
 
 /* footer */
 /*--------------------*/
 
+footer {
+	margin-top: 20px;
+	text-align: center;
+	background-color: #333;
+	color: #fff;
+	padding: 20px;
+}
+footer p {
+	font-size: 20px;
+	font-weight: 700;
+	margin-bottom: 0;
+}
+footer i {
+	margin: 10px;
+}
+footer a {
+	color: #fff;
+}

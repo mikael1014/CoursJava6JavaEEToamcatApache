@@ -55,6 +55,33 @@ public class About extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String myName = "NICOLE";
+        String titreH1 = "Hello Word ! Bon Lundi !";
+        request.setAttribute("nom", myName);
+        request.setAttribute("prenom", "Mikaël");
+        request.setAttribute("titreH1", titreH1);
+        
+        //envoie de parametres
+        
+        String langue=request.getParameter("langue");
+        String admin=request.getParameter("admin");
+        String content=request.getParameter("content");
+        
+        System.out.println("langue "+langue);
+        System.out.println("admin "+admin);
+        System.out.println("content "+content);
+        
+        
+        String monNom=request.getParameter("monNom");
+        String monPrenom=request.getParameter("monPrenom");
+        //String content=request.getParameter("content");
+        
+        System.out.println("mon nom "+monNom);
+        System.out.println("mon prenom "+monPrenom);
+        //System.out.println("content "+content);
+        //?monNom=NICOLE&monPrenom=Mikael
+        //?monNom=NICOLE&monPrenom=Mikael&langue=fr&admin=true&content=vip
+        
         this.getServletContext().getRequestDispatcher( "/WEB-INF/monnom.jsp" ).forward( request, response );
     }
 
