@@ -4,6 +4,8 @@
  */
 package fr.appli.beans;
 
+import fr.appli.emum_.Droit;
+
 /**
  *
  * @author Mike
@@ -11,6 +13,24 @@ package fr.appli.beans;
 public class Utilisateur {
     private String login;
     private String pass;
+    private Droit droit;
+
+    public Droit getDroit() {
+        return droit;
+    }
+
+    public void setDroit(Droit droit) {
+        this.droit = droit;
+    }
+
+    public String getNom() {
+        return nom;
+    }
+
+    public void setNom(String nom) {
+        this.nom = nom;
+    }
+    private String nom;
 
     public Utilisateur() {
     }

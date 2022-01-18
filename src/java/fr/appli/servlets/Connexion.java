@@ -30,7 +30,7 @@ public class Connexion extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         try ( PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
+
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
@@ -43,34 +43,36 @@ public class Connexion extends HttpServlet {
         }
     }
 
-    
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        this.getServletContext().getRequestDispatcher("/WEB-INF/connexion.jsp").forward(request, response);
+
         String login = request.getParameter("login");
         String password = request.getParameter("password");
+
+        System.out.println("Je verifi que je recois mes parametres");
         System.out.println("login " + login);
         System.out.println("password " + password);
-
+        this.getServletContext().getRequestDispatcher("/WEB-INF/connexion.jsp").forward(request, response);
     }
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        this.getServletContext().getRequestDispatcher("/WEB-INF/connexion.jsp").forward(request, response);
-        String login = request.getParameter("login");
-        String password = request.getParameter("password");
-        System.out.println("login " + login);
-        System.out.println("password " + password);
-
+        System.out.println("Je suis dans la Servlet  Connexion et dans la méthode post");
+//        String login = request.getParameter("login");
+//        String password = request.getParameter("password");
+//        System.out.println("login " + login);
+//        System.out.println("password " + password);
+//        if (login.equals("user")
+//                && password.equals("123")) {
+//            response.sendRedirect("bonjour");
+//            //this.getServletContext().getRequestDispatcher("/WEB-INF/bonjour.jsp").forward(request, response);
+//        } else {
+//            this.getServletContext().getRequestDispatcher("/WEB-INF/connexion.jsp").forward(request, response);
+//        }
     }
 
-    /**
-     * Returns a short description of the servlet.
-     *
-     * @return a String containing servlet description
-     */
     @Override
     public String getServletInfo() {
         return "Short description";

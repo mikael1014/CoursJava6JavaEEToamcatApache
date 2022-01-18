@@ -13,14 +13,13 @@
     </head>
     <body>
         <h1>Hello World!</h1>
-         <form method="post" action="bonsoir">
- <%--        <form method="post" >    --%>
-            <input type="text" name="login"  value=""  />
+         <form method="post" action="bonjour">
+            <input type="text" name="login"  value="user"  />
             
-            <input type="text" name="password"  value=""  />
+            <input type="text" name="password"  value="123"  />
             
             
-            <input type="submit" value="Valider"  />
+            <input type="submit" value="Se connecter"  />
         </form>
 
     </body>

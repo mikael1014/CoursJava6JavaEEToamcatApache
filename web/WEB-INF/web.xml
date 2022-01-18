@@ -16,6 +16,18 @@
         <servlet-name>Connexion</servlet-name>
         <servlet-class>fr.appli.servlets.Connexion</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Traitement</servlet-name>
+        <servlet-class>fr.appli.servlets.Traitement</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>ExpressionLanguageServlet</servlet-name>
+        <servlet-class>fr.appli.servlets.ExpressionLanguageServlet</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>JstlServlet</servlet-name>
+        <servlet-class>fr.appli.servlets.JstlServlet</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>BonjourServlet</servlet-name>
         <url-pattern>/bonjour</url-pattern>
@@ -30,7 +42,19 @@
     </servlet-mapping>
     <servlet-mapping>
         <servlet-name>Connexion</servlet-name>
-        <url-pattern>/Connexion</url-pattern>
+        <url-pattern>/connexion</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Traitement</servlet-name>
+        <url-pattern>/traitement</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ExpressionLanguageServlet</servlet-name>
+        <url-pattern>/expression</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>JstlServlet</servlet-name>
+        <url-pattern>/jstl</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
